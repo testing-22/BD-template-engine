@@ -13,25 +13,26 @@ app.get('/', (req, res) => {
 
 app.get('/:id', (req, res) => {
     // console.log(req.params)
-    const camisa = {
+    const items = {
+        camisa: {
             id: 1,
             name: 'Camisa',
             category: 'Roupa',
             amount: 10,
             media: 15.56,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates dolorem aliquid quibusdam dolor suscipit deserunt mollitia! Animi error rem maxime aperiam dolores odio minus assumenda, asperiores suscipit ducimus aliquid. Assumenda repellendus quam veniam? Atque in omnis cum perspiciatis id hic aut reiciendis, esse illum corrupti nostrum maiores, temporibus quae cupiditate blanditiis doloribus eum sed! Molestiae perspiciatis totam sapiente cum.'
+        },
+        notebook: {
+            id: 1283,
+            name: 'Notebook',
+            category: 'Tecnologia',
+            amount: 25,
+            media: 1300.56,
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates dolorem aliquid quibusdam dolor suscipit deserunt mollitia! Animi error rem maxime aperiam dolores odio minus assumenda, asperiores suscipit ducimus aliquid. Assumenda repellendus quam veniam? Atque in omnis cum perspiciatis id hic aut reiciendis, esse illum corrupti nostrum maiores, temporibus quae cupiditate blanditiis doloribus eum sed! Molestiae perspiciatis totam sapiente cum.'
         }
-
-    const notebook = {
-        id: 1283,
-        name: 'Notebook',
-        category: 'Tecnologia',
-        amount: 25,
-        media: 1300.56,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates dolorem aliquid quibusdam dolor suscipit deserunt mollitia! Animi error rem maxime aperiam dolores odio minus assumenda, asperiores suscipit ducimus aliquid. Assumenda repellendus quam veniam? Atque in omnis cum perspiciatis id hic aut reiciendis, esse illum corrupti nostrum maiores, temporibus quae cupiditate blanditiis doloribus eum sed! Molestiae perspiciatis totam sapiente cum.'
     }
-
-    if(req.params.id !== '1') res.render('product.ejs', { produto: notebook })
+    res.render('product.ejs', { produto: })
+    if (req.params.id !== '1') res.render('product.ejs', { produto: notebook })
     else res.render('product.ejs', { produto: camisa })
 })
 
