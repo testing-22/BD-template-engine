@@ -83,7 +83,7 @@ p {
 
 @media (min-width: 1024px) {
     .product__img {
-        max-width: 450px;
+        max-height: 450px;
     }
 
     .product__info > p:last-child {
